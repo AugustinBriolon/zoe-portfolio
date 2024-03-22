@@ -5,7 +5,12 @@
 
       <div class="w-full flex items-center justify-between">
         <div class="flex items-center justify-start gap-4">
-          <Button name="ZC" asLink href="/" />
+          <div @click="this.isMenuOpen = false" class="flex md:hidden">
+            <Button name="ZC" asLink href="/" />
+          </div>
+          <div class="hidden md:flex">
+            <Button name="ZC" asLink href="/" />
+          </div>
           <Button name="Projets" logo="/icons/projets.svg" asLink href="/projets" className="hidden md:flex" />
           <Button name="Playground" logo="/icons/play.svg" asLink href="/playground" className="hidden md:flex" />
           <Button name="À Propos" logo="/icons/about.svg" asLink href="/about" className="hidden md:flex" />
@@ -23,9 +28,15 @@
       </div>
 
       <div v-if="isMenuOpen" class="w-full flex md:hidden flex-col justify-start items-start gap-4">
-        <Button name="Projets" logo="/icons/projets.svg" asLink href="/projets" className="flex" />
-        <Button name="Playground" logo="/icons/play.svg" asLink href="/playground" className="flex" />
-        <Button name="À Propos" logo="/icons/about.svg" asLink href="/about" className="flex" />
+        <div @click="toggleMenu">
+          <Button name="Projets" logo="/icons/projets.svg" asLink href="/projets" className="flex" />
+        </div>
+        <div @click="toggleMenu">
+          <Button name="Playground" logo="/icons/play.svg" asLink href="/playground" className="flex" />
+        </div>
+        <div @click="toggleMenu">
+          <Button name="À Propos" logo="/icons/about.svg" asLink href="/about" className="flex" />
+        </div>
         <div class="flex items-center justify-start gap-4">
           <img src="/icons/insta.svg" alt="Icon Instagram" class="w-6 h-6">
           <img src="/icons/tiktok.svg" alt="Icon TikTok" class="w-6 h-6">
