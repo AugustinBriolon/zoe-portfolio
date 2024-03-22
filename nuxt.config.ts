@@ -2,8 +2,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
-  css: ['@/css/main.css'],
-  modules: ['@nuxtjs/tailwindcss'],
+  css: ['/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   vite: {
     resolve: {
       alias: {

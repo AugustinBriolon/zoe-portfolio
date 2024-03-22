@@ -5,7 +5,7 @@
 </template>
 
 <style lang="scss">
-// @import '@/scss/main.scss';
+@import '@/scss/main.scss';
 </style>
 
 <script setup>
@@ -20,7 +20,6 @@ const fetchProjets = async ($client) => {
       title: item.fields.title,
       // subtitle: item.fields.subtitle,
     }));
-    console.log(formattedData)
     return formattedData;
   } catch (error) {
     console.error('Error fetching articles:', error);
@@ -39,7 +38,6 @@ const fetchPlayground = async ($client) => {
     const formattedData = playground._rawValue.items.map((item) => ({
       title: item.fields.title,
     }));
-    console.log(formattedData)
     return formattedData;
   } catch (error) {
     console.error('Error fetching articles:', error);

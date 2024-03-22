@@ -1,23 +1,24 @@
 @font-face {
-  font-family: 'Michroma';
-  src: url('/fonts/Michroma.ttf') format('truetype');
+  font-family: 'ClashDisplay';
+  src: url('/fonts/ClashDisplay.ttf') format('truetype');
   font-display: auto;
 }
 @font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter.ttf') format('truetype');
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica.ttf') format('truetype');
   font-display: auto;
 }
 
 // Colors
 $color-white: #fff;
-$color-black: #333;
-$color-gold: #a7904a;
-$color-gray: #dbe1ea;
+$color-black: #000000;
+$color-purple: #662367;
+$color-purple-light: #FED4FF;
+$color-gray: #ebe3e3;
 
 // Fonts
-$font-michroma: 'Michroma';
-$font-inter: 'Inter';
+$font-clash-display: 'Michroma';
+$font-helvetica: 'Helvetica';
 $font-thin: 100;
 $font-extra-light: 200;
 $font-light: 300;
@@ -31,9 +32,6 @@ $font-black: 900;
 // Radius
 $radius-small: 8px;
 $radius-medium: 14px;
-
-// Max Width
-$max-width: 1280px;
 
 // Padding
 $padding-x-default: clamp(20px, 8vw, 100px);
