@@ -1,25 +1,60 @@
 <template>
-  <nav class="flex w-screen items-center justify-between p-4 fixed backdrop-blur">
-    <div class="flex items-center gap-4">
-      <Button name="ZC" asLink href="/" />
-      <Button name="Projets" logo="/icons/projets.svg" asLink href="/projets" />
-      <Button name="Playground" logo="/icons/play.svg" asLink href="/playground" />
-      <Button name="À Propos" logo="/icons/about.svg" asLink href="/about" />
-    </div>
-    <div class="flex items-center gap-4">
-      <img src="/icons/insta.svg" alt="logo" class="w-6 h-6" />
-      <img src="/icons/tiktok.svg" alt="logo" class="w-6 h-6" />
-      <img src="/icons/linkedin.svg" alt="logo" class="w-6 h-6" />
-    </div>
-  </nav>
+  <header class="fixed top-0 flex justify-center z-50 w-full p-4">
+    <nav
+      class="navBar relative w-full bg-white bg-opacity-50 backdrop-blur-md border border-white rounded-[35px] px-4 py-3 flex flex-col gap-4">
+
+      <div class="w-full flex items-center justify-between">
+        <div class="flex items-center justify-start gap-4">
+          <Button name="ZC" asLink href="/" />
+          <Button name="Projets" logo="/icons/projets.svg" asLink href="/projets" className="hidden md:flex" />
+          <Button name="Playground" logo="/icons/play.svg" asLink href="/playground" className="hidden md:flex" />
+          <Button name="À Propos" logo="/icons/about.svg" asLink href="/about" className="hidden md:flex" />
+        </div>
+
+        <div class="hidden md:flex items-center justify-start gap-4">
+          <img src="/icons/insta.svg" alt="Icon Instagram" class="w-6 h-6">
+          <img src="/icons/tiktok.svg" alt="Icon TikTok" class="w-6 h-6">
+          <img src="/icons/linkedin.svg" alt="Icon Linkedin" class="w-6 h-6">
+        </div>
+
+        <div class="flex md:hidden ">
+          <Button logo="/icons/burger.svg" className="h-8" :onClickFunction="toggleMenu" />
+        </div>
+      </div>
+
+      <div v-if="isMenuOpen" class="w-full flex md:hidden flex-col justify-start items-start gap-4">
+        <Button name="Projets" logo="/icons/projets.svg" asLink href="/projets" className="flex" />
+        <Button name="Playground" logo="/icons/play.svg" asLink href="/playground" className="flex" />
+        <Button name="À Propos" logo="/icons/about.svg" asLink href="/about" className="flex" />
+        <div class="flex items-center justify-start gap-4">
+          <img src="/icons/insta.svg" alt="Icon Instagram" class="w-6 h-6">
+          <img src="/icons/tiktok.svg" alt="Icon TikTok" class="w-6 h-6">
+          <img src="/icons/linkedin.svg" alt="Icon Linkedin" class="w-6 h-6">
+        </div>
+      </div>
+
+    </nav>
+  </header>
 </template>
 
 <script>
 export default {
   name: "Header",
   data() {
-    return {};
+    return {
+      isMenuOpen: false,
+    };
   },
-  methods: {},
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+  },
 };
 </script>
+
+<style scoped>
+.navBar {
+  transition: all 0.3s;
+}
+</style>

@@ -1,14 +1,14 @@
 <template>
-  <NuxtLink 
-    class="cursor-pointer px-2 py-1 border border-solid border-black flex items-center gap-2 rounded-full bg-white"
+  <NuxtLink
+    class="w-fit cursor-pointer px-2 py-1 border border-solid border-black flex items-center gap-2 rounded-full bg-white"
     :class="className" v-if="asLink" :to=href>
-    <p class="text-lg">{{ name }}</p>
+    <p class="text-lg" v-if="name">{{ name }}</p>
     <img v-if="logo" :src="logo" alt="logo" class="w-4 h-4" />
   </NuxtLink>
-  <button @click="onclick"
-    class="px-2 py-1 border border-solid border-black flex items-center gap-2 rounded-full bg-white" :class="className"
-    v-else>
-    <p class="text-lg">{{ name }}</p>
+  <button @click="onClickFunction"
+    class="w-fit px-2 py-1 border border-solid border-black flex items-center gap-2 rounded-full bg-white"
+    :class="className" v-else>
+    <p class="text-lg" v-if="name">{{ name }}</p>
     <img v-if="logo" :src="logo" alt="logo" class="w-4 h-4" />
   </button>
 </template>
@@ -19,7 +19,7 @@ export default {
   props: {
     name: {
       type: String,
-      required: true
+      required: false
     },
     className: {
       type: String,
@@ -29,7 +29,7 @@ export default {
       type: String,
       required: false
     },
-    onclick: {
+    onClickFunction: {
       type: Function,
       required: false
     },

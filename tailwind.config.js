@@ -11,7 +11,7 @@ export default {
   theme: {
     extend: {
       height: {
-        'screen-header': 'calc(100vh - 65px)',
+        'screen-header': 'calc(100vh - 96px)',
       },
       backgroundImage: {
         buble: "url('/images/bg.png')",
