@@ -1,18 +1,18 @@
 <template>
-  <Section class="h-screen-header flex flex-col gap-8 items-center px-4">
+  <Section class="h-screen-header flex flex-col gap-12 md:gap-8 items-center px-4">
     <h1 class="text-center">Zoé Cassis</h1>
-    <div class="flex flex-col justify-between gap-8 w-3/4 h-full">
+    <div class="flex flex-col justify-between gap-8 w-full lg:w-3/4 h-2/3 md:h-full">
       <iframe src="https://www.youtube.com/embed/g7O6KN49iIE" frameborder=" 0" allowfullscreen
         class="aspect-video w-full  h-auto"></iframe>
-      <div class="w-full flex items-center justify-center gap-4 mb-10 cursor-pointer" href="#projets">
+      <a class="w-full flex items-center justify-center gap-4 md:mb-10 cursor-pointer" href="#projets">
         <img src="/icons/arrow.svg" alt="Icon Arrow" class="animate-bounce">
-        <p>Voir mes projets</p>
+        <p class="text-md md:text-xl">Voir mes projets</p>
         <img src="/icons/arrow.svg" alt="Icon Arrow" class="animate-bounce">
-      </div>
+      </a>
     </div>
   </Section>
 
-  <Section class="h-fit w-full px-4" id="#projets">
+  <Section class="h-fit w-full px-4 pt-12" id="projets">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
       <div class="space-y-2">
         <img class="w-full h-auto object-cover"
@@ -52,8 +52,10 @@
           src="https://images.unsplash.com/photo-1668584054035-f5ba7d426401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3465&q=80"
           alt="Image Description">
         <Button name="Tous les projets" logo="/icons/arrow.svg" asLink href="/projets"
-          class="arrowIcon w-full justify-between" />
+          class="arrowIcon hidden sm:flex w-full justify-between" />
       </div>
+      <Button name="Tous les projets" logo="/icons/arrow.svg" asLink href="/projets"
+        class="arrowIcon col-span-2 sm:hidden w-full justify-between" />
     </div>
   </Section>
 
