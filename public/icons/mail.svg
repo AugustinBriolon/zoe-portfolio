@@ -1,3 +1,7 @@
-<svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.25 22.7549V13.1299C13.25 9.62988 10.45 7.00488 7.125 7.00488M13.25 22.7549H1V13.1299C1 9.62988 3.8 7.00488 7.125 7.00488M13.25 22.7549V29.7549M7.125 7.00488H18.5M18.5 7.00488V1.75488H22.875M18.5 7.00488V12.2549M12.375 22.7549H29V12.2549C29 10.8625 28.4469 9.52714 27.4623 8.54257C26.4777 7.55801 25.1424 7.00488 23.75 7.00488M20.25 22.7549V29.7549M6.25 18.3799H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mailbox">
+  <path d="M22 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.5C2 7 4 5 6.5 5H18c2.2 0 4 1.8 4 4v8Z" />
+  <polyline points="15,9 18,9 18,11" />
+  <path d="M6.5 5C9 5 11 7 11 9.5V17a2 2 0 0 1-2 2v0" />
+  <line x1="6" x2="7" y1="10" y2="10" />
 </svg>

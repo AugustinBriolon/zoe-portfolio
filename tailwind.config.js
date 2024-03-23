@@ -13,6 +13,9 @@ export default {
       height: {
         'screen-header': 'calc(100vh - 96px)',
       },
+      minHeight: {
+        'screen-header': 'calc(100vh - 96px)',
+      },
       backgroundImage: {
         buble: "url('/images/bg.png')",
       },
