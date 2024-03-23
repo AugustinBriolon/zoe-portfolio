@@ -1,7 +1,7 @@
 <template>
-  <div class="h-screen-header">
+  <section class="h-screen-header flex flex-col gap-12 md:gap-8 items-center px-4">
     <h1>Projets</h1>
-  </div>
+  </section>
 </template>
 
 <script>

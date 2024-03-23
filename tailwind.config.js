@@ -19,6 +19,9 @@ export default {
       backgroundImage: {
         buble: "url('/images/bg.png')",
       },
+      gridTemplateColumns: {
+        footer: '200px 1fr 200px',
+      },
     },
   },
   plugins: [],
