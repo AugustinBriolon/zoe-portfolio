@@ -13,7 +13,7 @@
   </Section>
 
   <Section class="h-fit w-full px-4" id="#projets">
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
       <div class="space-y-2">
         <img class="w-full h-auto object-cover"
           src="https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
@@ -51,12 +51,13 @@
         <img class="w-full h-auto object-cover"
           src="https://images.unsplash.com/photo-1668584054035-f5ba7d426401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3465&q=80"
           alt="Image Description">
-        <Button name="Tous les projets" logo="/icons/arrow.svg" asLink href="/projets" class="arrowIcon" />
+        <Button name="Tous les projets" logo="/icons/arrow.svg" asLink href="/projets"
+          class="arrowIcon w-full justify-between" />
       </div>
     </div>
   </Section>
 
-  <Section class="w-full px-4 flex items-center justify-between">
+  <Section class="w-full px-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
     <p class="text-xl font-bold">Un projet en tête ? Parlons-en !</p>
     <Button name="zoecassis@gmail.com" logo="/icons/mail.svg" asLink href="mailto:zoecassis@gmail.com" />
   </Section>
