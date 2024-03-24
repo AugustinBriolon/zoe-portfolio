@@ -2,8 +2,9 @@
   <section class="h-screen-header flex flex-col gap-12 md:gap-8 items-center px-4">
     <h1 class="text-center">Zoé Cassis</h1>
     <div class="flex flex-col justify-between gap-8 w-full lg:w-3/4 h-2/3 md:h-full">
-      <iframe src="https://www.youtube.com/embed/g7O6KN49iIE" frameborder=" 0" allowfullscreen
-        class="aspect-video w-full  h-auto"></iframe>
+      <iframe
+        src="https://www.youtube.com/embed/g7O6KN49iIE?autoplay=1&mute=1&autohide=1&showinfo=0&controls=0&loop=1&playlist=g7O6KN49iIE"
+        frameborder=" 0" allowfullscreen class="aspect-video w-full  h-auto"></iframe>
       <a class="w-full flex items-center justify-center gap-4 md:mb-10 cursor-pointer" href="#projets">
         <img src="/icons/arrow.svg" alt="Icon Arrow" class="animate-bounce">
         <p class="text-xl">Voir mes projets</p>

@@ -1,5 +1,5 @@
 <template>
-  <section class="h-sfit flex flex-col gap-12 md:gap-8  px-4">
+  <section class="h-sfit flex flex-col gap-12 px-4">
     <h1 class="text-center">Playground</h1>
 
     <div class="flex flex-col gap-4">
