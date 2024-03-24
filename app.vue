@@ -14,11 +14,15 @@ const { $client } = useNuxtApp();
 
 const fetchProjets = async ($client) => {
   try {
-    const { data: projets } = await useAsyncData('projets', () => $client.getEntries({ content_type: "projets" }));
+    const { data: projects } = await useAsyncData('projects', () => $client.getEntries({ content_type: "projets", order: "-fields.date" }));
 
-    const formattedData = projets._rawValue.items.map((item) => ({
+    const formattedData = projects._rawValue.items.map((item) => ({
       title: item.fields.title,
-      // subtitle: item.fields.subtitle,
+      description: item.fields.description,
+      media: item.fields.media.fields.file.url,
+      url: item.fields.url,
+      date: item.fields.date,
+      tag: item.fields.tag,
     }));
     return formattedData;
   } catch (error) {
@@ -27,8 +31,8 @@ const fetchProjets = async ($client) => {
   }
 };
 
-fetchProjets($client).then((projets) => {
-  useProjets().value = projets;
+fetchProjets($client).then((projects) => {
+  useProjects().value = projects;
 });
 
 const fetchPlayground = async ($client) => {

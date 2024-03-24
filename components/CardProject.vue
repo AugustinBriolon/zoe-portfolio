@@ -1,10 +1,11 @@
 <template>
-  <NuxtLink to="/project/ze" class="relative overflow-hidden rounded shadow transition hover:shadow-lg">
-    <img alt="" :src="projetData.image" class="h-auto w-full object-cover" />
+  <NuxtLink :to="`/project/${projetData.title}`"
+    class="relative overflow-hidden rounded shadow transition hover:shadow-lg w-fit h-fit ">
+    <img alt="" :src="`https:${projetData.media}`" class="h-auto w-full object-cover" />
     <div
-      class="absolute inset-0 h-full w-full transition-all opacity-0 hover:opacity-100 bg-transparent hover:bg-gray-900/25 flex flex-col items-start justify-end">
+      class="absolute inset-0 h-full w-full transition-all opacity-0 hover:opacity-100 bg-transparent hover:bg-gray-900/50 flex flex-col items-start justify-end">
       <div class="p-4 sm:p-6 flex flex-col gap-2">
-        <p class="text-xs text-white">{{ projetData.date }}</p>
+        <p class="text-xs text-white uppercase">{{ formatDate(projetData.date) }}</p>
         <h4 class="text-lg text-white line-clamp-2">{{ projetData.title }}</h4>
         <p class="line-clamp-3 text-sm text-white">{{ projetData.description }}</p>
       </div>
@@ -21,8 +22,14 @@ export default {
       required: false,
     },
   },
-  data() {
-    return {};
-  },
-};
+  methods: {
+    formatDate(dateString) {
+      const [year, month, day] = dateString.split('-');
+      const date = new Date(year, month - 1, day);
+
+      const options = { month: "long", year: "numeric" };
+      return date.toLocaleDateString("fr-FR", options);
+    }
+  }
+}
 </script>
