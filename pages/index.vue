@@ -14,7 +14,7 @@
   </section>
 
   <section class="h-fit w-full px-4 pt-12" id="projets">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
       <template v-for="(group, index) in computedProjectGroups" :key="index">
         <div class="flex flex-col gap-2">
           <CardProject v-for="project in group" :key="project.id" :projetData="project" />

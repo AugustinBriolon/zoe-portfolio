@@ -8,12 +8,8 @@
           :onClickFunction="() => filterProjects(tag)" />
       </div>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
-      <template v-for="(projects, index) in filteredProjects" :key="index">
-        <div class="flex flex-col gap-2">
-          <CardProject :projetData="projects" />
-        </div>
-      </template>
+    <div class="columns-4 gap-2 md:gap-4 [&>div:not(:first-child)]:mt-2 md:[&>div:not(:first-child)]:mt-4">
+      <CardProject v-for="(project) in filteredProjects" :key="project.id" :projetData="project" />
     </div>
 
   </section>
