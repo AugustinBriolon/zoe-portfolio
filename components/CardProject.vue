@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to="`/project/${projetData.title}`"
     class="relative overflow-hidden rounded shadow transition hover:shadow-lg w-fit h-fit ">
-    <img alt="" :src="`https:${projetData.media}`" class="h-auto w-full object-cover" />
+    <img :alt="`${projetData.title}`" :src="`https:${projetData.media}`" class="h-auto w-full object-cover" />
     <div
       class="absolute inset-0 h-full w-full transition-all opacity-0 hover:opacity-100 bg-transparent hover:bg-gray-900/50 flex flex-col items-start justify-end">
       <div class="p-4 sm:p-6 flex flex-col gap-2 text-white">

@@ -1,84 +1,21 @@
 <template>
-  <section class="h-fit flex flex-col gap-12 md:gap-8 items-center px-4">
-    <div class="space-y-5 md:space-y-8">
-      <div class="space-y-3">
-        <h2 class="text-2xl font-bold md:text-3xl dark:text-white">Announcing a free plan for small teams</h2>
-
-        <p class="text-lg text-gray-800 dark:text-gray-200">At preline, our mission has always been focused on
-          bringing openness and transparency to the design process. We've always believed that by providing a space
-          where designers can share ongoing work not only empowers them to make better products, it also helps them
-          grow.</p>
+  <section class="h-fit flex flex-col gap-12 items-center px-4">
+    <div class="flex flex-col md:flex-row gap-4 items-start justify-center w-full">
+      <div class="w-1/2 flex flex-col items-start justify-center">
+        <h1>{{ computedProject.title }}</h1>
+        <p>{{ computedProject.description }}</p>
       </div>
-
-      <p class="text-lg text-gray-800 dark:text-gray-200">We're proud to be a part of creating a more open culture and
-        to continue building a product that supports this vision.</p>
-
-      <figure>
-        <img class="w-full object-cover rounded-xl"
-          src="https://images.unsplash.com/photo-1670272505340-d906d8d77d03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-          alt="Image Description">
-        <figcaption class="mt-3 text-sm text-center text-gray-500">
-          A woman sitting at a table.
-        </figcaption>
-      </figure>
-
-      <p class="text-lg text-gray-800 dark:text-gray-200">As we've grown, we've seen how Preline has helped companies
-        such as Spotify, Microsoft, Airbnb, Facebook, and Intercom bring their designers closer together to create
-        amazing things. We've also learned that when the culture of sharing is brought in earlier, the better teams
-        adapt and communicate with one another.</p>
-
-      <p class="text-lg text-gray-800 dark:text-gray-200">That's why we are excited to share that we now have a <a
-          class="text-blue-600 decoration-2 hover:underline font-medium" href="#">free version of Preline</a>, which
-        will allow individual designers, startups and other small teams a chance to create a culture of openness early
-        on.</p>
-
-      <blockquote class="text-center p-4 sm:px-7">
-        <p
-          class="text-xl font-medium text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal dark:text-gray-200">
-          To say that switching to Preline has been life-changing is an understatement. My business has tripled and I
-          got my life back.
-        </p>
-        <p class="mt-5 text-gray-800 dark:text-gray-200">
-          Nicole Grazioso
-        </p>
-      </blockquote>
-
-      <figure>
-        <img class="w-full object-cover rounded-xl"
-          src="https://images.unsplash.com/photo-1670272498380-eb330b61f3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-          alt="Image Description">
-        <figcaption class="mt-3 text-sm text-center text-gray-500">
-          A man and a woman looking at a cell phone.
-        </figcaption>
-      </figure>
-
-      <div class="space-y-3">
-        <h3 class="text-2xl font-semibold dark:text-white">Bringing the culture of sharing to everyone</h3>
-
-        <p class="text-lg text-gray-800 dark:text-gray-200">We know the power of sharing is real, and we want to
-          create an opportunity for everyone to try Preline and explore how transformative open communication can be.
-          Now you can have a team of one or two designers and unlimited spectators (think PMs, management, marketing,
-          etc.) share work and explore the design process earlier.</p>
+      <div class="w-1/2">
+        <img :src="`https:${computedProject.media}`" :alt="`${computedProject.title}`"
+          class="h-auto w-full object-cover" />
       </div>
-
-      <ul class="list-disc list-outside space-y-5 ps-5 text-lg text-gray-800 dark:text-gray-200">
-        <li class="ps-2">Preline allows us to collaborate in real time and is a really great way for leadership on the
-          team to stay up-to-date with what everybody is working on," <a
-            class="text-blue-600 decoration-2 hover:underline font-medium" href="#">said</a> Stewart Scott-Curran,
-          Intercom's Director of Brand Design.</li>
-        <li class="ps-2">Preline opened a new way of sharing. It's a persistent way for everyone to see and absorb
-          each other's work," said David Scott, Creative Director at <a
-            class="text-blue-600 decoration-2 hover:underline font-medium" href="#">Eventbrite</a>.</li>
-      </ul>
-
-      <p class="text-lg text-gray-800 dark:text-gray-200">Small teams and individual designers need a space where they
-        can watch the design process unfold, both for themselves and for the people they work with – no matter if it's
-        a fellow designer, product manager, developer or client. Preline allows you to invite more people into the
-        process, creating a central place for conversation around design. As those teams grow, transparency and
-        collaboration becomes integrated in how they communicate and work together.</p>
-
     </div>
 
+    <div class="h-px bg-black w-full"></div>
+
+    <div class="w-full">
+      <iframe :src="formatUrl" frameborder="0" allowfullscreen class="aspect-video w-full h-auto"></iframe>
+    </div>
   </section>
 </template>
 
@@ -86,14 +23,25 @@
 export default {
   name: "Projet",
   data() {
-    return {
-      projetData: {
-        title: "Projet 1",
-        description: "Description du projet 1",
-        date: "2021",
-        image: "https://images.unsplash.com/photo-1668584054131-d5721c515211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80",
-      },
-    };
+    return {};
+  },
+  computed: {
+    computedProject() {
+      return useProjects().value.find((project) => project.title === this.$route.params.projet);
+    },
+    formatUrl() {
+      const url = this.computedProject.url;
+      const videoId = url.split('https://youtu.be/')[1];
+      return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&autohide=1&showinfo=0&controls=0&loop=1&playlist=${videoId}`;
+    }
+  },
+  mounted() {
+    this.computedProject;
+  },
+  watch: {
+    computedProject: {
+      immediate: true,
+    },
   },
 };
 </script>
