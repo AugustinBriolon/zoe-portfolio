@@ -1,7 +1,8 @@
 <template>
   <header class="fixed top-0 flex justify-center z-50 w-full p-4">
     <nav
-      class="navBar relative w-full bg-white bg-opacity-50 backdrop-blur-md border border-white rounded-[35px] px-4 py-3 flex flex-col gap-4">
+      class="navBar relative w-full bg-white bg-opacity-50 backdrop-blur-md border border-white rounded-[35px] px-4 py-3 flex flex-col gap-4 overflow-hidden "
+      :class="isMenuOpen ? 'max-h-96' : 'max-h-16'">
 
       <div class="w-full flex items-center justify-between">
         <div class="flex items-center justify-start gap-4">
@@ -27,7 +28,7 @@
         </div>
       </div>
 
-      <div v-if="isMenuOpen" class="w-full flex md:hidden flex-col justify-start items-start gap-4">
+      <div v-if="isMenuOpen" class="w-full flex md:hidden flex-col justify-start items-start gap-4 py-4">
         <div @click="toggleMenu">
           <Button name="Projets" logo="/icons/projets.svg" asLink href="/projets" className="flex" />
         </div>
@@ -66,6 +67,6 @@ export default {
 
 <style scoped>
 .navBar {
-  transition: all 0.3s;
+  transition: max-height 0.3s;
 }
 </style>
