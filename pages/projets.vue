@@ -8,7 +8,7 @@
           :onClickFunction="() => filterProjects(tag)" />
       </div>
     </div>
-    <div class="columns-4 gap-2 md:gap-4 [&>div:not(:first-child)]:mt-2 md:[&>div:not(:first-child)]:mt-4">
+    <div class="columns-2 md:columns-4 gap-2 md:gap-4 [&>div:not(:first-child)]:mt-2 md:[&>div:not(:first-child)]:mt-4">
       <CardProject v-for="(project) in filteredProjects" :key="project.id" :projetData="project" />
     </div>
 

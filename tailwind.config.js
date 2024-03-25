@@ -4,12 +4,17 @@ export default {
     './components/*.{js,vue,ts}',
     './layouts/*.vue',
     './pages/*.vue',
+    './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
     './app.vue',
     './error.vue',
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#662367',
+        secondary: '#FED4FF',
+      },
       height: {
         'screen-header': 'calc(100vh - 96px)',
       },
