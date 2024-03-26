@@ -1,5 +1,5 @@
 <template>
-  <section class="h-fit flex flex-col gap-12 md:gap-8 items-center px-4">
+  <section class="h-fit flex flex-col gap-12 md:gap-8 items-center px-4 max-w-screen-xl mx-auto">
     <h1>Projets</h1>
     <div class="w-full">
       <div class="flex gap-2 overflow-x-scroll no-scrollbar">

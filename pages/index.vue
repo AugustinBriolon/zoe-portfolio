@@ -13,7 +13,7 @@
     </a>
   </section>
 
-  <section class="h-fit w-full px-4 pt-12" id="projets">
+  <section class="h-fit w-full px-4 pt-12 mx-auto max-w-screen-xl" id="projets">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       <template v-for="(group, index) in computedProjectGroups" :key="index">
         <div class="flex flex-col gap-2">

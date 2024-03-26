@@ -1,10 +1,10 @@
 <template>
-  <section class="h-fit flex flex-col gap-12 md:gap-8 items-center px-4">
+  <section class="h-fit flex flex-col gap-12 md:gap-8 items-center px-4 max-w-screen-xl mx-auto">
     <h1>À Propos</h1>
     <div class="flex flex-col items-start justify-center w-full h-fit gap-8">
       <img
         src="https://images.unsplash.com/photo-1668584054131-d5721c515211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
-        alt="Photo de Zoé Cassis" class="rounded-full h-44 w-44">
+        alt="Photo de Zoé Cassis" class="rounded-full h-96 w-96">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit
         voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
@@ -18,7 +18,7 @@
       </p>
       <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full">
         <Button name="zoecassis@gmail.com" asLink href="mailto:zoecassis@gmail.com" logo="/icons/mail.svg" />
-        <Button name="Mon CV" asLink href="/cv.pdf" logo="/icons/file.svg" />
+        <Button name="Mon CV" asLink href="/images/cv.pdf" logo="/icons/file.svg" />
       </div>
     </div>
   </section>

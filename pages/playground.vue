@@ -1,5 +1,5 @@
 <template>
-  <section class="h-sfit flex flex-col gap-12 px-4">
+  <section class="h-fit flex flex-col gap-12 px-4 mx-auto max-w-screen-xl">
     <h1 class="text-center">Playground</h1>
 
     <div class="flex flex-col gap-4">
