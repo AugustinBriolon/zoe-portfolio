@@ -1,5 +1,5 @@
 <template>
-  <div class="w-fit h-fit relative overflow-hidden rounded transition hover:shadow-lg">
+  <div class="w-full h-fit relative overflow-hidden rounded transition hover:shadow-lg">
     <NuxtLink :to="`/project/${projetData.title}`" class=" w-fit h-fit" :class="className">
       <img :alt="`${projetData.title}`" :src="`https:${projetData.media}`" class="h-auto w-full object-cover" />
       <div
