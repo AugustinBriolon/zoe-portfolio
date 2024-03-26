@@ -1,12 +1,12 @@
 <template>
-  <section class="h-screen-header flex flex-col gap-12 md:gap-8 items-center justify-between px-4">
-    <div class="flex flex-col items-center justify-center md:justify-start gap-8 w-full h-full">
+  <section class="h-screen-header flex flex-col gap-12 md:gap-8 items-center justify-start px-4">
+    <div class="flex flex-col items-center justify-center md:justify-start gap-8 w-full h-fit">
       <h1 class="text-center">Zoé Cassis</h1>
       <iframe
         src="https://www.youtube.com/embed/g7O6KN49iIE?autoplay=1&mute=1&autohide=1&showinfo=0&controls=0&loop=1&playlist=g7O6KN49iIE"
-        frameborder=" 0" allowfullscreen class="aspect-video w-full md:w-4/5 h-auto"></iframe>
+        frameborder=" 0" allowfullscreen class="aspect-video w-full md:w-2/3 h-auto"></iframe>
     </div>
-    <a class="w-full flex items-center justify-center gap-4 mb-32 md:mb-10 cursor-pointer" href="#projets">
+    <a class="w-full h-[inherit] flex items-center justify-center gap-4 cursor-pointer" href="#projets">
       <img src="/icons/arrow.svg" alt="Icon Arrow" class="animate-bounce">
       <p class="text-xl">Voir mes projets</p>
       <img src="/icons/arrow.svg" alt="Icon Arrow" class="animate-bounce">
