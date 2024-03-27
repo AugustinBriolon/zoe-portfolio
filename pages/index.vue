@@ -1,7 +1,16 @@
+<script setup>
+definePageMeta({
+  pageTransition: 'fade'
+})
+</script>
+
 <template>
   <section class="h-screen-header flex flex-col gap-12 md:gap-8 items-center justify-start px-4">
     <div class="flex flex-col items-center justify-center md:justify-start gap-8 w-full h-fit">
-      <h1 class="text-center">Zoé Cassis</h1>
+      <div class="flex flex-col items-center justify-center">
+        <h1 class="text-center">Zoé Cassis</h1>
+        <h2 class="text-center">Motion Designer</h2>
+      </div>
       <iframe
         src="https://www.youtube.com/embed/g7O6KN49iIE?autoplay=1&mute=1&autohide=1&showinfo=0&controls=0&loop=1&playlist=g7O6KN49iIE"
         frameborder=" 0" allowfullscreen class="aspect-video w-full md:w-2/3 h-auto"></iframe>

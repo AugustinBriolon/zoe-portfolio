@@ -3,6 +3,8 @@
 *::after {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 ::-moz-selection {
@@ -13,6 +15,11 @@
 ::selection {
   color: $color-purple;
   background: $color-purple-light;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialisaed;
 }
 
 .no-scrollbar::-webkit-scrollbar {

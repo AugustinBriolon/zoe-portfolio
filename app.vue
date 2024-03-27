@@ -41,6 +41,10 @@ const fetchPlayground = async ($client) => {
 
     const formattedData = playground._rawValue.items.map((item) => ({
       title: item.fields.title,
+      description: item.fields.description,
+      media: item.fields.media.fields.file.url,
+      date: item.fields.date,
+      tag: item.fields.tag,
     }));
     return formattedData;
   } catch (error) {
@@ -53,3 +57,16 @@ fetchPlayground($client).then((playground) => {
   usePlayground().value = playground;
 });
 </script>
+
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.5s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
+</style>
