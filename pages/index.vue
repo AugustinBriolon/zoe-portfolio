@@ -1,9 +1,3 @@
-<script setup>
-definePageMeta({
-  pageTransition: 'fade'
-})
-</script>
-
 <template>
   <section class="h-screen-header flex flex-col gap-12 md:gap-8 items-center justify-start px-4">
     <div class="flex flex-col items-center justify-center md:justify-start gap-8 w-full h-fit">

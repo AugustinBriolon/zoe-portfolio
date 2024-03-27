@@ -1,7 +1,7 @@
 <template>
   <section class="h-fit flex flex-col gap-24 items-center px-4">
-    <div class="flex flex-col md:flex-row gap-4 items-start justify-center w-full">
-      <div class="max-w-1/2 flex flex-col items-start justify-center gap-4">
+    <div class="flex flex-col gap-8 items-center justify-center w-full">
+      <div class="max-w-1/2 flex flex-col items-center justify-center gap-4">
         <h1>{{ computedProject.title }}</h1>
         <p>{{ computedProject.description }}</p>
       </div>

@@ -6,6 +6,17 @@
 
 <style lang="scss">
 @import '@/scss/main.scss';
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.5s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
 </style>
 
 <script setup>
@@ -57,16 +68,3 @@ fetchPlayground($client).then((playground) => {
   usePlayground().value = playground;
 });
 </script>
-
-<style>
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.5s;
-}
-
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-  transform: translateY(20px);
-}
-</style>

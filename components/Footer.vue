@@ -3,9 +3,15 @@
     class="grid gap-4  md:grid-cols-footer w-screen items-center justify-center px-4 py-8 bg-white bg-opacity-50 backdrop-blur-md">
     <div></div>
     <div class="w-full flex items-center justify-center gap-4">
-      <img src="/icons/insta.svg" alt="logo" class="w-6 h-6" />
-      <img src="/icons/tiktok.svg" alt="logo" class="w-6 h-6" />
-      <img src="/icons/linkedin.svg" alt="logo" class="w-6 h-6" />
+      <a href="https://www.instagram.com/zoe_cassis/" target="_blank">
+        <img src="/icons/insta.svg" alt="Icon Instagram" class="w-6 h-6">
+      </a>
+      <a href="https://www.tiktok.com/@zoe_cassis" target="_blank">
+        <img src="/icons/tiktok.svg" alt="Icon TikTok" class="w-6 h-6">
+      </a>
+      <a href="https://www.linkedin.com/in/zo%C3%A9-cassis-8b97ba19a/?originalSubdomain=fr" target="_blank">
+        <img src="/icons/linkedin.svg" alt="Icon Linkedin" class="w-6 h-6">
+      </a>
     </div>
     <div class="flex items-center gap-1">
       <p class="text-sm">Code by</p>
