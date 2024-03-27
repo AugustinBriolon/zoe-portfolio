@@ -1,12 +1,12 @@
 <template>
-  <section class="h-fit flex flex-col gap-12 px-4 mx-auto max-w-screen-xl">
+  <section class="h-fit w-full flex flex-col gap-12 px-4 mx-auto max-w-screen-xl">
     <h1 class="text-center">Playground</h1>
 
     <div class="flex flex-col gap-4">
       <h4>Dessins</h4>
       <div ref="dessinsSlider" class="flex gap-4 md:gap-10 overflow-x-scroll no-scrollbar">
         <div ref="dessinsSliderItem" v-for="(playground, index) in computedDessinsPlaygrounds" :key="index"
-          class="margin-x-slider w-3/4 sm:w-2/4 lg:w-1/3 min-w-[200px] aspect-square shrink-0 rounded-bl-small rounded-tr-small relative group max-w-md">
+          class="margin-x-slider w-3/4 sm:w-1/2 lg:w-1/3 min-w-[200px] aspect-square shrink-0 rounded-bl-small rounded-tr-small relative group max-w-md">
           <img
             class="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-bl-small rounded-tr-small overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500"
             :src="playground.media" alt="Image Playground" />

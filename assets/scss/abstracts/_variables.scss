@@ -33,6 +33,9 @@ $font-black: 900;
 $radius-small: 8px;
 $radius-medium: 14px;
 
+// Max Width
+$max-width: 1280px;
+
 // Padding
 $padding-x-default: clamp(20px, 8vw, 100px);
 $padding-y-default: clamp(20px, 8vh, 100px);
