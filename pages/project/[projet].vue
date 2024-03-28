@@ -22,7 +22,13 @@
     <div class="columns-1 md:columns-2 gap-2 md:gap-4 [&>div:not(:first-child)]:mt-2 md:[&>div:not(:first-child)]:mt-4">
       <div v-for="(project) in computedProject.medias" :key="project.id"
         class="w-full h-fit relative overflow-hidden rounded transition hover:shadow-lg">
-        <img :alt="`${project.title}`" :src="`https:${project.fields.file.url}`" class="h-full w-full object-cover" />
+        <div v-if="project.fields.file.url.endsWith('webm')">
+          <video class="h-auto w-96 object-cover" autoplay loop muted>
+            <source :src="`https:${project.fields.file.url}`" type="video/webm" />
+          </video>
+        </div>
+        <img v-else :alt="`${project.title}`" :src="`https:${project.fields.file.url}`"
+          class="h-full w-full object-cover" />
       </div>
     </div>
   </section>
