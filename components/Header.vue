@@ -7,14 +7,17 @@
       <div class="w-full flex items-center justify-between">
         <div class="flex items-center justify-start gap-4">
           <div @click="this.isMenuOpen = false" class="flex md:hidden">
-            <Button name="ZC" asLink href="/" />
+            <Button name="ZC" asLink href="/" className="uppercase text-sm" />
           </div>
           <div class="hidden md:flex">
             <Button name="ZC" asLink href="/" />
           </div>
-          <Button name="Projets" logo="/icons/projets.svg" asLink href="/projets" className="hidden md:flex" />
-          <Button name="Playground" logo="/icons/play.svg" asLink href="/playground" className="hidden md:flex" />
-          <Button name="À Propos" logo="/icons/about.svg" asLink href="/about" className="hidden md:flex" />
+          <Button name="PROJETS" logo="/icons/projets.svg" asLink href="/projets"
+            className="hidden md:flex uppercase text-sm" />
+          <Button name="PLAYGROUNDS" logo="/icons/play.svg" asLink href="/playground"
+            className="hidden md:flex uppercase text-sm" />
+          <Button name="À PROPOS" logo="/icons/about.svg" asLink href="/about"
+            className="hidden md:flex uppercase text-sm" />
         </div>
 
         <div class="hidden md:flex items-center justify-start gap-4">
@@ -30,13 +33,13 @@
 
       <div v-if="isMenuOpen" class="w-full flex md:hidden flex-col justify-start items-start gap-4 py-4">
         <div @click="toggleMenu">
-          <Button name="Projets" logo="/icons/projets.svg" asLink href="/projets" className="flex" />
+          <Button name="PROJETS" logo="/icons/projets.svg" asLink href="/projets" className="flex uppercase" />
         </div>
         <div @click="toggleMenu">
-          <Button name="Playground" logo="/icons/play.svg" asLink href="/playground" className="flex" />
+          <Button name="PLAYGROUNDS" logo="/icons/play.svg" asLink href="/playground" className="flex uppercase" />
         </div>
         <div @click="toggleMenu">
-          <Button name="À Propos" logo="/icons/about.svg" asLink href="/about" className="flex" />
+          <Button name="À PROPOS" logo="/icons/about.svg" asLink href="/about" className="flex uppercase" />
         </div>
         <div class="flex items-center justify-start gap-4">
           <a href="https://www.instagram.com/zoe_cassis/" target="_blank">

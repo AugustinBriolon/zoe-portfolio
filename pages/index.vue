@@ -50,7 +50,7 @@ export default {
       return useProjects().value;
     },
     computedProjectGroups() {
-      const projects = this.computedProjects.slice(1, 12);
+      const projects = this.computedProjects.slice(0, 12);
       const groups = [];
       for (let i = 0; i < projects.length; i += 3) {
         groups.push(projects.slice(i, i + 3));

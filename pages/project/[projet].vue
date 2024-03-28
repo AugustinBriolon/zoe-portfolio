@@ -16,6 +16,15 @@
     <div class="w-full">
       <iframe :src="formatUrl" frameborder="0" allowfullscreen class="aspect-video w-full h-auto"></iframe>
     </div>
+
+    <div v-if="computedProject.medias" class="h-px bg-primary w-full"></div>
+
+    <div class="columns-1 md:columns-2 gap-2 md:gap-4 [&>div:not(:first-child)]:mt-2 md:[&>div:not(:first-child)]:mt-4">
+      <div v-for="(project) in computedProject.medias" :key="project.id"
+        class="w-full h-fit relative overflow-hidden rounded transition hover:shadow-lg">
+        <img :alt="`${project.title}`" :src="`https:${project.fields.file.url}`" class="h-full w-full object-cover" />
+      </div>
+    </div>
   </section>
 </template>
 
@@ -37,6 +46,9 @@ export default {
   },
   onMounted() {
     this.computedProject;
+  },
+  created() {
+    console.log(this.computedProject)
   }
 };
 </script>

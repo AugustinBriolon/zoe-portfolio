@@ -2,7 +2,7 @@
   <NuxtLink
     class="w-fit cursor-pointer px-2 py-1 border border-solid border-black flex items-center gap-2 rounded-full bg-white"
     :class="className" v-if="asLink" :to=href>
-    <p class="text-lg text-center" v-if="name">{{ name }}</p>
+    <p class="text-center" v-if="name">{{ name }}</p>
     <img v-if="logo" :src="logo" alt="logo" class="iconLink w-4 h-4" />
   </NuxtLink>
   <button @click="onClickFunction"

@@ -31,6 +31,7 @@ const fetchProjets = async ($client) => {
       title: item.fields.title,
       description: item.fields.description,
       media: item.fields.media.fields.file.url,
+      medias: item.fields.medias,
       url: item.fields.url,
       date: item.fields.date,
       tag: item.fields.tag,
@@ -66,5 +67,25 @@ const fetchPlayground = async ($client) => {
 
 fetchPlayground($client).then((playground) => {
   usePlayground().value = playground;
+});
+
+const fetchExtra = async ($client) => {
+  try {
+    const { data: extra } = await useAsyncData('extra', () => $client.getEntries({ content_type: "extra" }));
+
+    const formattedData = extra._rawValue.items.map((item) => ({
+      name: item.fields.name,
+      media: item.fields.media?.fields.file.url,
+      description: item.fields.description,
+    }));
+    return formattedData;
+  } catch (error) {
+    console.error('Error fetching articles:', error);
+    return [];
+  }
+};
+
+fetchExtra($client).then((extra) => {
+  useExtra().value = extra;
 });
 </script>
